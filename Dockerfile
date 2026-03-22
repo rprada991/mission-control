@@ -12,7 +12,7 @@ RUN if [ -f pnpm-lock.yaml ]; then \
       pnpm install --frozen-lockfile; \
     else \
       echo "WARN: pnpm-lock.yaml not found in build context; running non-frozen install" && \
-      pnpm install --no-frozen-lockfile; \h
+      pnpm install --no-frozen-lockfile; \
     fi
 
 FROM base AS build
